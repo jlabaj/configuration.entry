@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<div>
+  <h2>My Heroes</h2>
+  <ul class="heroes">
+    <li *ngFor="let hero of heroes" 
+      [class.selected]="hero === selectedHero" 
+      (click)="onSelect(hero)">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </li>
+  </ul>
+  <div *ngIf="selectedHero">
+    <h2>{{selectedHero.name | uppercase}} is my hero</h2>
+    <button (click)="gotoDetail()">View Details</button>
+  </div>
+    <alert type="info">ng2-datetime hello worlds!</alert>
+    <h4>Inline</h4>
+    <div>
+        <datetime [timepicker]="false" [(ngModel)]="date3"></datetime>
+        <h5><strong>ngModel:</strong> {{getDate(date) | date: "medium"}}</h5>
+    </div>
+</div>

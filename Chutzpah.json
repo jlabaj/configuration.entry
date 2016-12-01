@@ -1,0 +1,20 @@
+﻿{
+  "EnableCodeCoverage": "true",
+  "CodeCoverageIncludes": [ "app/*" ],
+  "CodeCoverageExcludes": [ "*.d.ts", "Scripts/*", "*spec.ts" ],
+  "TestHarnessReferenceMode": "Normal",
+  "TestHarnessLocationMode": "SettingsFileAdjacent",
+  "References": [
+    { "Path": "node_modules/angular2/core.js" }
+  ],
+  "Tests": [
+    //{ "Path": "app/face/testCases/"},
+    { "Path": "app/TestCases/" }
+
+  ],
+  "Compile": {
+    "Mode": "External",
+    "Extensions": [ ".ts" ],
+    "ExtensionsWithNoOutput": [ ".d.ts" ]
+  }
+}
