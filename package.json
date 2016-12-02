@@ -6,17 +6,7 @@
     "builddev:iis": "del-cli node_modules\\ng2-datetime\\node_modules && webpack --config config\\webpack.dev.iis.js",
     "builddev:wds": "del-cli node_modules\\ng2-datetime\\node_modules && webpack --config config\\webpack.dev.wds.js",
     "build": "npm run builddev:iis",
-    "ci": "npm run lint",
-    "postinstall": "typings install && npm run copyShims && npm run copyPolyfill && npm run copySystem && npm run copyRx && npm run copyBootstrapCss && npm run copyBootstrapDatepickerCss && npm run copyBootstrapDatepickerJs",
-    "start": "webpack-dev-server --config config/webpack.dev.WDS.js --inline --hot",
-    "typings": "typings",
-    "copyBootstrapCss": "copy node_modules\\bootstrap\\dist\\css\\bootstrap.min.css libs",
-    "copyBootstrapDatepickerCss": "copy node_modules\\bootstrap-datepicker\\dist\\css\\bootstrap-datepicker3.min.css libs",
-    "copyBootstrapDatepickerJs": "copy node_modules\\bootstrap-datepicker\\dist\\js\\bootstrap-datepicker.js libs",
-    "copyShims": "copy node_modules\\es6-shim\\es6-shim.min.js libs",
-    "copyPolyfill": "copy node_modules\\reflect-metadata\\reflect.js libs && copy node_modules\\zone.js\\dist\\zone.js libs",
-    "copySystem": "copy node_modules\\systemjs\\dist\\system.js libs",
-    "copyRx": "copy node_modules\\rxjs\\bundles\\Rx.js libs"
+    "start": "webpack-dev-server --config config/webpack.dev.WDS.js --inline --hot"
   },
   "dependencies": {
     "@angular/common": "2.2.0",
